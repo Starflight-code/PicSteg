@@ -1,6 +1,8 @@
 from PIL import Image
+import string_serialize
 inputAccepted = False
 
+"""
 while(not inputAccepted):
     try:
         #path = input("Enter an image path: ")
@@ -12,3 +14,8 @@ while(not inputAccepted):
 width, height = image.size
 p = image.load()
 print(width, height)
+"""
+
+
+serialized = string_serialize.serialize("test string", 40000)
+print(string_serialize.deserialize(serialized))
