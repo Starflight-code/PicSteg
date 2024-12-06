@@ -1,3 +1,5 @@
+# DO NOT USE AI FOR THIS, IT WILL NOT KNOW WHAT ANYTHING HERE IS
+
 from PIL import Image
 import string_serialize
 inputAccepted = False

@@ -1,3 +1,5 @@
+# DO NOT USE AI FOR THIS, IT WILL NOT KNOW WHAT ANYTHING HERE IS
+
 def serialize(some_string: str, pixels: int) -> tuple[bytearray(), bytearray(), bytearray()]:
     byte_string = bytearray(some_string.encode(encoding="utf-8", errors="replace"))
     size = len(byte_string)
