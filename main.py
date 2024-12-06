@@ -15,6 +15,6 @@ p = image.load()
 print(width, height)
 
 """
-serialized = string_serialize.serialize("test string", 40000)
+serialized = string_serialize.serialize("test string", 100)
 print(string_serialize.deserialize(serialized))
 """
