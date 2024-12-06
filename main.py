@@ -1,7 +1,6 @@
 from PIL import Image
 import string_serialize
 inputAccepted = False
-
 while(not inputAccepted):
     try:
         #path = input("Enter an image path: ")

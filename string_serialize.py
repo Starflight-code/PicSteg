@@ -30,3 +30,11 @@ def uint32ToBytes(number: int) -> bytearray:
     for i in range(4): # uses bitwise operations to split 32 bit number into 4 bytes
         output.insert(0, (number >> (i * 8)) % 256)
     return output
+
+def bytesToUint32(byte_string: bytearray) -> int:
+    if len(byte_string) < 4:
+        raise AttributeError("Byte string is under 4 bytes and can not represent a 32 bit number.")
+    output = 0
+    for i in range(4): # uses bitwise operations to split 32 bit number into 4 bytes
+        output += byte_string[i] * pow(2, (3 - i) * 8)
+    return output
