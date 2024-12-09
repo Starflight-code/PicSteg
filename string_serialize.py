@@ -6,7 +6,7 @@ def serialize(some_string: str, pixels: int) -> tuple[bytearray(), bytearray(), 
     if pow(2, 32) < size or pixels * 3 < size * 8 + 32:
         # if embedded string length can not be fit within a 32 bit uint or data can not be fit within image size
         raise AttributeError("String size is out of 32 bit unsigned integer range and/or image is too small for this message.")
-    header = uint32ToBytes(size) # add size (in bytes) of encoding string (not including size) to front of bytearray
+    header = uint32ToBytes(size) # add size (in bytes) of encoding string (not including the size of this header) to front of bytearray
     for i in range(4):
         i = 3 - i
         byte_string.insert(0, header[i])
