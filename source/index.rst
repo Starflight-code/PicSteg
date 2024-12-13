@@ -12,4 +12,4 @@ PicSteg Technical Docs
    :caption: Contents:
 
    docs/process
-
+   modules
