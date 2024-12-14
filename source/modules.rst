@@ -6,3 +6,6 @@ API Documentation
 
 .. automodule:: string_serialize
    :members:
+
+.. automodule:: image_embed
+   :members:

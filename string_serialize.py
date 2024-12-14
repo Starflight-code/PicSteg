@@ -10,6 +10,7 @@ def serialize(some_string: str, pixels: int) -> tuple[bytearray(), bytearray(), 
    :raises AttributeError: if the string length is larger than 2^32-1 (can't be fit in length header) or message is too long for image size
    :rtype: tuple[bytearray(), bytearray(), bytearray()]
     """
+
     byte_string = bytearray(some_string.encode(encoding="utf-8", errors="replace"))
     size = len(byte_string)
     if pow(2, 32) < size or pixels * 3 < size * 8 + 32:
@@ -33,6 +34,7 @@ def deserialize(rgb_bytes: tuple[bytearray(), bytearray(), bytearray()]) -> str:
    :raises UnicodeDecodeError: if the bytes provided are not valid UTF-8
    :rtype: str
     """
+
     byte_string = bytearray()
 
     for i in range(len(rgb_bytes[0]) + len(rgb_bytes[1]) + len(rgb_bytes[2])): # pulls data from pixel block data, into byte_string
@@ -49,6 +51,7 @@ def uint32ToBytes(number: int) -> bytearray:
    :raises AttributeError: if the number is too small (negative) or too large (over 2^32 - 1)
    :rtype: bytearray
     """
+
     if pow(2, 32) < number or number < 0:
         raise AttributeError("Number is out of 32-bit unsigned integer range.")
     output = bytearray()
@@ -64,6 +67,7 @@ def bytesToUint32(byte_string: bytearray) -> int:
    :raises AttributeError: if the array length is under 4 bytes
    :rtype: bytearray
     """
+
     if len(byte_string) < 4:
         raise AttributeError("Byte string is under 4 bytes and can not represent a 32 bit number.")
     output = 0
