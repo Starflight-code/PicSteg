@@ -11,5 +11,6 @@ PicSteg Technical Docs
    :maxdepth: 2
    :caption: Contents:
 
+   docs/user
    docs/process
    modules

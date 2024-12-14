@@ -48,7 +48,7 @@ def bitsToByte(bits: list[int]) -> int:
 
     result = 0
     for i in range(8):
-        result += (bits[i] << i) & 1
+        result += (bits[i] & 1) << i
     return result
 
 

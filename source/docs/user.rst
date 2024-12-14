@@ -28,7 +28,7 @@ It couldn't be simpler, type 'r' this time and enter a path to an image you embe
 in the terminal.
 
 .. code-block:: text
-    ::emphasis-lines: 4
+    :emphasize-lines: 4
 
     Would you like to read or write to this image or exit (r/w/q)? r
     Enter an image path: my_image_path.png

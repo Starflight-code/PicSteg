@@ -28,7 +28,7 @@ if __name__ == '__main__':
                 message = input("Enter a message to write: ")
                 width, height = image.size
                 embed_arrays = string_serialize.serialize(message, width * height)
-                image_embed.embed(image, embed_arrays)
+                image = image_embed.embed(image, embed_arrays)
 
                 while(True):
                     try:
