@@ -73,7 +73,6 @@ def embed(image: ImageFile.ImageFile, data: tuple[bytearray, bytearray, bytearra
         for j in range(8): # find new values, add to pre-application cluster
             pixelCluster[j][i % 3] = findNewValue(p[(currentPixel + j) % width, (currentPixel + j) // width][i % 3], data[i % 3][i // 3], j)
         if (i % 3 == 2):
-            print(pixelCluster)
             for j in range(8): # apply cluster values
                 if len(p[(currentPixel + j) % width, (currentPixel + j) // width]) == 3:
                     p[(currentPixel + j) % width, (currentPixel + j) // width] = (pixelCluster[j][0], pixelCluster[j][1], pixelCluster[j][2])
