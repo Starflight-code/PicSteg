@@ -28,14 +28,14 @@ if __name__ == '__main__':
                 message = input("Enter a message to write: ")
                 width, height = image.size
                 embed_arrays = string_serialize.serialize(message, width * height)
-                image = image_embed.embed(image, embed_arrays)
+                image_embed.embed(image, embed_arrays)
 
                 while(True):
                     try:
                         path = input("Enter an output image path: ")
                         image.save(path)
                         break
-                    except:
+                    except Exception as e:
                         print("That path didn't work. Try again?")
             case 'q':
                 print("Goodbye!")
