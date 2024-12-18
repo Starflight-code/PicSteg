@@ -1,5 +1,3 @@
-# DO NOT USE AI FOR THIS, IT WILL NOT KNOW WHAT ANYTHING HERE IS
-
 def serialize(some_string: str, pixels: int) -> tuple[bytearray(), bytearray(), bytearray()]:
     """
     Takes a string and splits it into bytestreams for each color channel, checks that data can fit in pixels provided.
